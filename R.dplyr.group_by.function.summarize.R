@@ -1,0 +1,9 @@
+library(dplyr)
+mydata<-read.csv('murders.csv')
+names(mydata)
+mysubdata<-group_by(mydata,region)
+mysubdata
+summarize(mysubdata,sum(population))
+summarize(mysubdata,mean(population))
+summarize(mysubdata,max(population))
+summarize(mysubdata,median(population))
